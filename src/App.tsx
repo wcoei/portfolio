@@ -2,13 +2,25 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import { Link, Outlet } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h2> Portfolio </h2>
+        <nav>
+        <ul>
+          <li>
+            <Link to="/">Counter</Link>
+          </li>
+          <li>
+            <Link to="/newpage">NewPage</Link>
+          </li>
+        </ul>
+      </nav>
         <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
+        <Outlet />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
